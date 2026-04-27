@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NYCRP Portal</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(45deg,#000,#111,#222);color:#fff;overflow-x:hidden}
+header{padding:20px;text-align:center;background:#ff00aa;position:sticky;top:0}
+nav{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:10px}
+nav button{padding:10px 16px;border:none;border-radius:12px;background:#00e5ff;color:#000;font-weight:bold;cursor:pointer}
+section{display:none;padding:30px;min-height:70vh}
+section.active{display:block}
+.card{background:rgba(255,255,255,0.08);padding:20px;border-radius:20px;margin:15px 0;box-shadow:0 0 20px rgba(255,255,255,0.1)}
+.spin{display:inline-block;animation:spin 4s linear infinite}
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+marquee{color:#00ff66;font-size:20px}
+footer{text-align:center;padding:20px;background:#111}
+#jump{position:fixed;inset:0;background:rgba(0,0,0,0.95);display:none;z-index:9999;align-items:center;justify-content:center;flex-direction:column;text-align:center}
+#jump.show{display:flex;animation:flash .15s alternate 8}
+#jump img{width:180px;height:180px;border-radius:30px;margin:10px;box-shadow:0 0 30px #fff}
+#jump h1{font-size:48px;color:#ff0033;margin:10px;text-shadow:0 0 20px #fff}
+@keyframes flash{from{background:#000}to{background:#500}}
+</style>
+</head>
+<body>
+<header>
+<h1>NYCRP x Fred x Valk</h1>
+<marquee>WELCOME TO THE NYCRP DIMENSION. FRED IS RUNNING THE BUTTONS. VALK STOLE THE WIFI.</marquee>
+<nav>
+<button onclick="showTab('home')">Home</button>
+<button onclick="showTab('fred')">Fred</button>
+<button onclick="showTab('valk')">Valk</button>
+<button onclick="showTab('nycrp')">NYCRP</button>
+<button onclick="showTab('secret')">Portal</button>
+</nav>
+</header>
+<section id="home" class="active">
+<div class="card"><h2>Launch Zone</h2><p>You entered a website powered by cereal energy and mysterious keyboard sounds.</p></div>
+<div class="card"><p class="spin">🌀 NYCRP SIGNAL IS DOING SOMETHING IMPORTANT 🌀</p></div>
+<div class="card"><p>Warning: clicking buttons may increase banana levels.</p></div>
+</section>
+<section id="fred">
+<div class="card"><h2>Fred Mode</h2><p>Main character detected. Confidence level: skyscraper.</p></div>
+<div class="card"><p>Special move: creates ideas at 3x speed.</p></div>
+<div class="card"><p>Currently thinking about snacks and world domination.</p></div>
+</section>
+<section id="valk">
+<div class="card"><h2>Valk Core</h2><p>Appears when things become too normal.</p></div>
+<div class="card"><p>Energy source: thunder, lemonade, and mystery.</p></div>
+<div class="card"><p>Can communicate with pigeons.</p></div>
+</section>
+<section id="nycrp">
+<div class="card"><h2>NYCRP HQ</h2><p>No one knows what NYCRP means. Everyone nods anyway.</p></div>
+<div class="card"><p>Status: online, glowing, unstoppable.</p></div>
+<div class="card"><p>Employees: Fred, Valk, one raccoon.</p></div>
+</section>
+<section id="secret">
+<div class="card"><h2>Hidden Portal</h2><p>You found the secret chamber of dramatic buttons.</p><button onclick="fredvalk()">Press Me</button></div>
+</section>
+<div id="jump"><h1>YOU HAVE BEEN FREDVALKED</h1><div><img src="file:///mnt/data/Skärmbild 2026-04-27 171608.png"><img src="file:///mnt/data/Skärmbild 2026-04-27 171619.png"></div></div>
+<footer>Built with 99% chaos and 1% homework avoidance 🚀</footer>
+<script>
+function showTab(id){document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');}
+function fredvalk(){const j=document.getElementById('jump');j.classList.add('show');setTimeout(()=>{j.classList.remove('show')},2500);}
+</script>
+</body>
+</html>
